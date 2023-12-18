@@ -1,0 +1,23 @@
+Get a product which has an id of 
+
+
+
+
+
+Get all producuts which contains a string chiken in its name
+
+http://localhost:3005/products/chicken
+
+Add to a product an database 
+
+http://localhost:3005/producuts
+
+body
+{
+    "name": "Protein powder",
+    "protein": 24,
+    "fiber": 2,
+    "carbohydrates": 5,
+    "fat": 2
+}
+
