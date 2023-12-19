@@ -2,15 +2,8 @@ const Product = require("../models/product");
 
 exports.addProduct = async (req, res) => {
   try {
-    const { name, protein, fiber, fat, carbohydrates } = req.body;
 
-    const newProduct = new Product({
-      name: name,
-      protein: protein,
-      fiber: fiber,
-      carbohydrates: carbohydrates,
-      fat: fat,
-    });
+    const newProduct = new Product(req.body);
 
     await newProduct.save();
 
@@ -49,16 +42,6 @@ exports.findProducts = async (req, res) => {
   }
 };
 
-exports.updateProduct = async (req, res) => {
-  try {
-    const productId = req.params.id;
-    console.log(productId);
-    res.status(200).json("updated");
-  } catch (e) {
-    res.status(500).json(e);
-  }
-};
-
 exports.deleteProduct = async (req, res) => {
   try {
     await Product.deleteOne({ _id: req.params.id });
@@ -67,3 +50,13 @@ exports.deleteProduct = async (req, res) => {
     res.status(500).json(e);
   }
 };
+
+exports.updateProduct = async (req, res) => {
+  try {
+    await Product.replaceOne({_id: req.params.id}, req.body)
+    res.status(200).json("updated");
+  } catch (e) {
+    res.status(500).json(e);
+  }
+};
+

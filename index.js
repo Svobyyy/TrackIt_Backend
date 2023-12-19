@@ -18,8 +18,10 @@ app.use((req, res, next) => {
 });
 
 const productRouter = require("./routes/product");
+const dateRouter = require('./routes/date')
 
 app.use(productRouter);
+app.use(dateRouter);
 
 app.get("/", (req, res) => {
   res.status(200);

@@ -1,23 +1,24 @@
-Get a product which has an id of 
+Get a product which has an id of 657ecbd638eb32469d2f66e6 (GET)
 
+/product/657ecbd638eb32469d2f66e6
 
+Get all producuts which contains a string chiken in its name (GET)
 
+/products/chicken 
 
+Add a product to an database (POST)
 
-Get all producuts which contains a string chiken in its name
+/producuts
 
-http://localhost:3005/products/chicken
-
-Add to a product an database 
-
-http://localhost:3005/producuts
-
-body
+body:
 {
-    "name": "Protein powder",
-    "protein": 24,
-    "fiber": 2,
-    "carbohydrates": 5,
-    "fat": 2
+"name": "Protein powder",
+"protein": 24,
+"fiber": 2,
+"carbohydrates": 5,
+"fat": 2
 }
 
+Delete a product in a database which has an id of 657fbcd7bcd519a679eb257a (DELETE)
+
+/product/657fbcd7bcd519a679eb257a
