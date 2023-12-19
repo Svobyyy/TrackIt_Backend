@@ -23,9 +23,7 @@ exports.addProduct = async (req, res) => {
 exports.findProduct = async (req, res) => {
   try {
     
-    const product = await Product.where("name").equals(req.params.id);
-
-    console.log(product, req.params.id);
+    const product = await Product.findOne({_id: req.params.id})
 
     if (product.length !== 0) {
       res.status(200).json(product);
@@ -33,7 +31,6 @@ exports.findProduct = async (req, res) => {
       res.status(404).json("Not Found");
     }
   } catch (e) {
-    console.log(e);
     res.status(500).json(e);
   }
 };
