@@ -11,19 +11,29 @@ const productSchema = new Schema({
     },
     protein: {
         type: Number,
-        required: true
+        required: true,
+        default: 0
     },
     fiber: {
         type: Number,
-        required: true
+        required: true,
+        default: 0
+
     },
     fat: {
         type: Number,
-        required: true
+        required: true,
+        default: 0
     },
     carbohydrates: {
         type: Number,
-        required: true
+        required: true,
+        default: 0
+    },
+    quantity: {
+        type: Number,
+        required: true,
+        default: 0
     }
     
 })
@@ -32,7 +42,9 @@ const dateSchema = new Schema({
     date: {
         type: Date,
         required: true,
-        lowercase: true
+        lowercase: true,
+        minLenght: 10,
+        maxLength: 10,
     },
     breakfast: [productSchema],
     lunch: [productSchema],
