@@ -8,7 +8,7 @@ Get all producuts which contains a string chiken in its name (GET)
 
 Add a product to an database (POST)
 
-/producuts
+/producut
 
 body:
 {

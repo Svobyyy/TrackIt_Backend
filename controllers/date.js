@@ -1,17 +1,5 @@
 const Date = require("../models/date");
 
-exports.addDate = async (req, res) => {
-  try {
-    const newDate = new Date(req.body);
-
-    await newDate.save();
-
-    res.status(201).json("Added to a database");
-  } catch (e) {
-    res.status(500).json(e);
-  }
-};
-
 exports.getDate = async (req, res) => {
   try {
     const date = await Date.findOne({ date: req.params.date });
@@ -35,22 +23,36 @@ exports.getDate = async (req, res) => {
 };
 
 exports.addProductToDate = async (req, res) => {
+  const { name, protein, carbohydrates, fat, fiber, when, quantity } = req.body;
   try {
     await Date.updateOne(
-      { _id: "658549fa96773a3c50a7a7a1" },
+      { date: req.params.date },
       {
         $push: {
-          breakfast: {
-            name: "test",
-            protein: 24,
+          [when.toLowerCase()]: {
+            name,
+            protein,
+            carbohydrates,
+            fat,
+            fiber,
+            quantity,
           },
         },
       }
     );
-    const test = await Date.find();
+    res.status(201).send();
+  } catch (e) {
+    res.status(500).json(e);
+  }
+};
 
-    console.log(test);
-    res.status(200).json(test);
+exports.DeleteProductFromDate = async (req, res) => {
+
+  try {
+    const {when, id} = req.params
+    await Date.updateOne({}, { $pull: { [when]: { _id: id } } });
+
+    res.status(201).send();
   } catch (e) {
     res.status(500).json(e);
   }

@@ -6,9 +6,9 @@ const dateController = require("../controllers/date");
 
 router.get("/date/:date", dateController.getDate);
 
-router.post("/date", dateController.addDate);
+router.post("/date/:date", dateController.addProductToDate);
 
-router.get("/date", dateController.addProductToDate);
+router.delete("/date/:id/:when", dateController.DeleteProductFromDate)
 
 
 

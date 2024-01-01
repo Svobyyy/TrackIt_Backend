@@ -33,7 +33,7 @@ const productSchema = new Schema({
     quantity: {
         type: Number,
         required: true,
-        default: 0
+        default: 1
     }
     
 })
