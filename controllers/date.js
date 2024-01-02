@@ -23,8 +23,26 @@ exports.getDate = async (req, res) => {
 };
 
 exports.addProductToDate = async (req, res) => {
-  const { name, protein, carbohydrates, fat, fiber, when, quantity } = req.body;
+  const {
+    name,
+    protein,
+    carbohydrates,
+    fat,
+    fiber,
+    when,
+    quantity,
+    update,
+    oldWhen,
+    id,
+  } = req.body;
+
   try {
+    if (update) {
+      await Date.updateMany(
+        {},
+        { $pull: { [oldWhen.toLowerCase()]: { _id: id } } }
+      );
+    }
     await Date.updateOne(
       { date: req.params.date },
       {
@@ -47,11 +65,9 @@ exports.addProductToDate = async (req, res) => {
 };
 
 exports.DeleteProductFromDate = async (req, res) => {
-
   try {
-    const {when, id} = req.params
-    await Date.updateOne({}, { $pull: { [when]: { _id: id } } });
-
+    const { when, id } = req.params;
+    await Date.updateMany({}, { $pull: { [when]: { _id: id } } });
     res.status(201).send();
   } catch (e) {
     res.status(500).json(e);
