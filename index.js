@@ -8,7 +8,6 @@ const CONNECTION = process.env.CONNECTION;
 
 const app = express();
 app.use(express.json());
-// app.use(express.urlencoded({extended: true}))
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -33,10 +32,13 @@ app.get("*", (req, res) => {
   res.json("Not Found");
 });
 
-mongoose
-  .connect(CONNECTION)
-  .then(app.listen(PORT))
-  .catch((err) => {
-    console.log(err);
-  });
-// app.listen(3000)
+(async () => {
+  try {
+  await mongoose.connect(CONNECTION)
+  app.listen(PORT)
+} catch (err) {
+  console.log(err)
+}
+})()
+
+

@@ -23,6 +23,9 @@ const productSchema = new Schema({
     carbohydrates: {
         type: Number,
         required: true
+    },
+    barcode: {
+        type: Number
     }
     
 })
