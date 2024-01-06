@@ -22,12 +22,12 @@ const dateRouter = require('./routes/date')
 app.use(productRouter);
 app.use(dateRouter);
 
-app.get("/", (req, res) => {
+app.get("/", (_, res) => {
   res.status(200);
   res.json({ name: "karel" });
 });
 
-app.get("*", (req, res) => {
+app.get("*", (_, res) => {
   res.status(400);
   res.json("Not Found");
 });

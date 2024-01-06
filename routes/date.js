@@ -10,11 +10,4 @@ router.post("/date/:date", dateController.addProductToDate);
 
 router.delete("/date/:id/:when", dateController.DeleteProductFromDate)
 
-
-
-
-
-
-
-
 module.exports = router;
