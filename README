@@ -1,24 +1,21 @@
-Get a product which has an id of 657ecbd638eb32469d2f66e6 (GET)
+# Backend
 
-/product/657ecbd638eb32469d2f66e6
+Rest API for my mobile calories application
 
-Get all producuts which contains a string chiken in its name (GET)
+## How to use
 
-/products/chicken 
+```bash 
+# Install dependencies
+npm i
+```
 
-Add a product to an database (POST)
+```bash
+# Running the application
+npm run dev
+```
 
-/producut
+## Key Features
 
-body:
-{
-"name": "Protein powder",
-"protein": 24,
-"fiber": 2,
-"carbohydrates": 5,
-"fat": 2
-}
 
-Delete a product in a database which has an id of 657fbcd7bcd519a679eb257a (DELETE)
 
-/product/657fbcd7bcd519a679eb257a
+
