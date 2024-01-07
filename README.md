@@ -6,11 +6,13 @@ Rest API for my mobile calories application
 
 ```bash 
 # Install dependencies
-npm i
+
+npm install
 ```
 
 ```bash
 # Running the application
+
 npm run dev
 ```
 
