@@ -28,28 +28,49 @@ fetch('http://localhost:3005/products/prot', {
 
 ## Technologies
 
-- **Node.js:** A JavaScript runtime for building scalable network applications.
-- **MongoDB:** A NoSQL database for storing and retrieving data efficiently.
-- **Express:** A fast, unopinionated, minimalist web framework for Node.js.
-- **Mongoose:** An Object Data Modeling library for MongoDB and Node.js.
-
+- **Node.js** 
+- **MongoDB** 
+- **Express** 
+- **Mongoose**
 
 ## Key Features
 
 ### Dates
 
-- Get data of a specific Date Document
-- Add a Product to a Date with a Quantity and Time [ Breakfast, Lunch, Dinner, Snacks ]
-- Remove a Product from a Date
-- Update Product's Quantity, Date, or Time
+- Get data of a :Date Document or Create the Date
+  
+  * `/date/:date` (GET)
+    
+- If it exists, Update Product's Quantity, Date, or Time else Add the Product to the Date with the Quantity and Time <br>
+  [ Breakfast, Lunch, Dinner, Snacks ]
+  
+  * `/date/:date` (POST)
+    
+- Remove a Product from a Date with an :Id
+  
+  * `/date/:id/:when` (DELETE)
 
 ### Products
 
-- Find Products by a Name
-- Find a Product by a Barcode
+- Find Products which includes a :Name
+
+* `/products/:name` (GET)
+
+- Find a Product by a :Barcode
+
+* `/product/barcode/:barcode` (GET)
+  
 - Add a Product to a Collection
+
+* `/product` (POST)
+  
 - Delete a Product by an ID
+
+* `/product/:id` (DELETE)
+  
 - Update a Product by an ID
+
+* `/product/:id` (PUT)
   
 
 
