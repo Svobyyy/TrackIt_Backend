@@ -54,23 +54,23 @@ fetch('http://localhost:3005/products/prot', {
 
 - Find Products which includes a :Name
 
-* `/products/:name` (GET)
+  * `/products/:name` (GET)
 
 - Find a Product by a :Barcode
 
-* `/product/barcode/:barcode` (GET)
+  *  `/product/barcode/:barcode` (GET)
   
 - Add a Product to a Collection
 
-* `/product` (POST)
+  * `/product` (POST)
   
 - Delete a Product by an ID
 
-* `/product/:id` (DELETE)
+  * `/product/:id` (DELETE)
   
 - Update a Product by an ID
 
-* `/product/:id` (PUT)
+  * `/product/:id` (PUT)
   
 
 
