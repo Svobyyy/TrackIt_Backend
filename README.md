@@ -37,7 +37,7 @@ fetch('http://localhost:3005/products/prot', {
 
 ### Dates
 
-- Get data of a :Date Document or Create the Date
+- Get a data of a :Date Document or Create the Date
   
   * `/date/:date` (GET)
     
