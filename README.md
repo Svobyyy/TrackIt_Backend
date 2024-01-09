@@ -1,6 +1,6 @@
 # Backend
 
-Rest API for my [Mobile Calories Application](https://www.google.com)
+Rest API for my [Mobile Calories Application](https://github.com/Svobyyy/CaloriesCounter).
 
 ## How to use 
 
