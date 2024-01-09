@@ -1,6 +1,6 @@
 # Backend
 
-Rest API for my [Mobile Calories Application](https://github.com/Svobyyy/CaloriesCounter).
+Rest API for my [Calories and Nutrition Facts Tracker](https://github.com/Svobyyy/CaloriesCounter).
 
 ## How to use 
 
