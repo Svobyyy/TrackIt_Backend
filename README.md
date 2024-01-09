@@ -41,7 +41,7 @@ fetch('http://localhost:3005/products/prot', {
   
   * `/date/:date` (GET)
 
-- If it exists,It updates Product's Quantity, Date, or Time otherwise, add the Product to the Date with the Quantity and Time. <br>[ Breakfast, Lunch, Dinner, Snacks ]
+- If it exists, It updates Product's Quantity, Date, or Time otherwise add the Product to the Date with the Quantity and Time. <br>[ Breakfast, Lunch, Dinner, Snacks ]
   
   * `/date/:date` (POST)
     
