@@ -37,37 +37,37 @@ fetch('http://localhost:3005/products/prot', {
 
 ### Dates
 
-- Retrieve data from a :Date or create the new Date.
+- Retrieves data from a :Date or create the new Date.
   
   * `/date/:date` (GET)
 
-- If it exists, update Product's Quantity, Date, or Time otherwise, add the Product to the Date with the Quantity and Time. <br>[ Breakfast, Lunch, Dinner, Snacks ]
+- If it exists,It updates Product's Quantity, Date, or Time otherwise, add the Product to the Date with the Quantity and Time. <br>[ Breakfast, Lunch, Dinner, Snacks ]
   
   * `/date/:date` (POST)
     
-- Delete Products based on the Date and :Id.
+- Deletes Products based on the Date and :Id.
   
   * `/date/:id/:when` (DELETE)
 
 ### Products
 
-- Find Products that include a :Name.
+- Finds Products that include a :Name.
 
   * `/products/:name` (GET)
 
-- Find a Product by a :Barcode.
+- Finds a Product by a :Barcode.
 
   *  `/product/barcode/:barcode` (GET)
   
-- Add a Product to a Collection.
+- Adds a Product to a Collection.
 
   * `/product` (POST)
   
-- Delete a Product using an ID.
+- Deletes a Product using an ID.
 
   * `/product/:id` (DELETE)
   
-- Update a Product using an ID.
+- Updates a Product using an ID.
 
   * `/product/:id` (PUT)
   
