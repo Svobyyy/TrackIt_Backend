@@ -1,4 +1,4 @@
-# Backend
+# TrackIt Backend
 
 Rest API for my [Calories and Nutrition Facts Tracker](https://github.com/Svobyyy/CaloriesCounter).
 
